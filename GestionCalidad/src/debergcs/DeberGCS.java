@@ -27,6 +27,10 @@ public class DeberGCS {
         System.out.println("===== 4.- Consumo de conbustible  ======");
         System.out.println("===== 5.- Consumo de conbustible  ======");
         System.out.println("===== 6.- Ganancia neta de un trabajador  ======");
+        System.out.println("===== 7.- Ingresar 3 números y saber cual es el mayor o menor  ======");
+        System.out.println("===== 8.- Ingresar un numero y saber q es  ======");
+        System.out.println("===== 9.- Grados  ======");
+        System.out.println("===== 10.- Calculo de vuelto  ======");
         System.out.println("==Elige la opccion del Menu==");             
         cadena =numero.next();
         cadena = metodo.max(cadena);
@@ -82,7 +86,53 @@ Al final muestre el resultado solicitado.
                     7)	Ingresar tres números y mostrar el menor o el mayor, según el usuario decida.*/
             case 7: Modulos.E14 e14 = new Modulos.E14();
                     e14.Datos();
-                    break;     
+                    break;  
+            /*
+            8)	Realice un programa que muestre si un número ingresado es par o impar, positivo o negativo, entero o decimal.        
+            */
+            case 8: Modulos.E16 e16 = new Modulos.E16();
+                    e16.Datos();
+                    break;  
+                    
+            /*
+            9)	Hacer un programa que pida una letra por teclado y luego un número (dos variables), si la letra digitada es C 
+                    entonces significa que el número representa grados centígrados, así que lo convierte a grados Fahrenheit, 
+                    si la letra digitada es F entonces significa que el número representa grados Fahrenheit, 
+                    así que lo convierte a grados centígrados. Si digitó una letra distinta entonces saque un mensaje de error 
+                    diciendo que solo puede digitar C o F.        
+            */
+             case 9: Modulos.E18 e18 = new Modulos.E18();
+                    e18.Datos();
+                    break; 
+                    
+            /*10)	Pida por teclado cuantos billetes de 100, 20, 10, 5 y 1 tiene la persona en el bolsillo. 
+                    Ahora pida por teclado cuanto vale un artículo, el programa debe decir si tiene el dinero suficiente 
+                    para comprarlo y cuanto sería el vuelto, si le hace falta debe salir un aviso diciendo: 
+                    "te falta dinero" y debe decir cuanto le falta.*/
+                    
+            case 10: Modulos.E20 e20 = new Modulos.E20();
+                    e20.Datos();
+                    break;
+            /*11)	Un señor adquiere un vehículo en un valor X, dicha persona desea saber la depreciación que sufrirá 
+                    dicho vehículo en N años. Previo análisis desarrolle un diagrama que permita mostrar el año 
+                    y la depreciación que sufre el vehículo en cada año. 
+                    Para calcular la depreciación usará el método de la “suma de dígitos”*/
+            case 11: Modulos.E22 e22 = new Modulos.E22();
+                    e22.Datos();
+                    break;
+            /*12)	Realice un programa que liste la tabla de sumar entre el 0 y 9 de cualquier número ingresado.*/
+            case 12: Modulos.E24 e24 = new Modulos.E24();
+                    e24.Datos();
+                    break;
+            case 13: Modulos.E26 e26 = new Modulos.E26();
+                    e26.Datos();
+                    break;
+            case 14: Modulos.E28 e28 = new Modulos.E28();
+                    e28.Datos();
+                    break;
+            case 15: Modulos.E30 e30 = new Modulos.E30();
+                    e30.Datos();
+                    break;
             default:                 
                     System.out.println("Por favor ingrese un valor existente en el menu");
                     Menu();

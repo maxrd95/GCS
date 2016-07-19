@@ -180,7 +180,9 @@ Al final muestre el resultado solicitado.
             case 24: Modulos.E48 e48 = new Modulos.E48();
                     e48.calculo();
                     break;
-            
+            case 25: Modulos.E50 e50 = new Modulos.E50();
+                    e50.mostrar();
+                    break;
             default:                 
                     System.out.println("Por favor ingrese un valor existente en el menu");
                     Menu();

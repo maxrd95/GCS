@@ -15,8 +15,9 @@ import java.util.Scanner;
 public class E6 {
     public static void E6(){
         Scanner numero = new Scanner(System.in);
+        System.out.println("Calcular días y horas en minutos");
         int Dia = 0,Hora=0,Minuto=0;
-        System.out.println("Ingrese los minutos que desea calcular en Dia:Horas:Minutos");
+        System.out.println("Ingrese los minutos que desea calcular en Días, Horas y Minutos");
         Minuto = numero.nextInt();
         if(Minuto >= 1440){
             Dia = Minuto/1440;

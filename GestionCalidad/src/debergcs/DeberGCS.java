@@ -151,6 +151,12 @@ Al final muestre el resultado solicitado.
             case 21: Modulos.E42 e42 = new Modulos.E42();
                     e42.Datos();
                     break;
+            case 22: Modulos.E44 e44 = new Modulos.E44();
+                    e44.Datos();
+                    break;
+            case 23: Modulos.E46 e46 = new Modulos.E46();
+                    e46.Datos();
+                    break;
             
             default:                 
                     System.out.println("Por favor ingrese un valor existente en el menu");

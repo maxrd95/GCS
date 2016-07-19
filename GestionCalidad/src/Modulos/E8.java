@@ -18,24 +18,32 @@ public class E8 {
     Scanner numero = new Scanner(System.in);
     int Horas,Minutos,VelocidadKMH,VelocidadMS;
     double litrosKM,DineroKM,litros100KM,Dinero100KM,HorasTotal,KMrecorrido,Gasolina,DineroGastado;
-    String kmrecorrido,gasolina,dineroGastado;
+    String kmrecorrido,gasolina,dineroGastado,horas,minutos;
+    
     public void Variables(){
      
         System.out.println("Consumo de conbustible.    ");
         System.out.println("Total de KM recorridos");
         kmrecorrido = numero.next();        
-        KMrecorrido=metodo.Doble(kmrecorrido);                 
+        KMrecorrido = metodo.Doble(kmrecorrido);
+        KMrecorrido = metodo.NegativoD(KMrecorrido);
         System.out.println("Precio de la gasolina por litro");
         gasolina = numero.next();
         Gasolina=metodo.Doble(gasolina); 
+        Gasolina = metodo.NegativoD(Gasolina);
         System.out.println("Dinero de la gasolina gastado en el viaje");
         dineroGastado = numero.next();
         DineroGastado=metodo.Doble(dineroGastado);
+        DineroGastado = metodo.NegativoD(DineroGastado);
         System.out.println("Tiempo que se ha tardado (en horas y minutos)");
         System.out.println("Ingrese la/s hora/s transcurrida/s");
-        Horas = numero.nextInt();
+        horas = numero.next();
+        Horas = metodo.Entero(horas);
+        Horas = metodo.NegativoE(Horas);
         System.out.println("Ingrese el/los minuto/s transcurrido/s");
-        Minutos = numero.nextInt();
+        minutos = numero.next();
+        Minutos = metodo.Entero(minutos);
+        Minutos = metodo.NegativoE(Minutos);
         Consumokm();        
     }
     public void Consumokm(){
@@ -65,6 +73,6 @@ public class E8 {
                 + "Litros : " + litrosKM + " Dólares : " + DineroKM + "\n" +
                 "3. Velocidad media (en km/h y m/s). \n" +
                 "KM/H : " + VelocidadKMH + "  M/S : " + VelocidadMS);
-        Menu();
+        metodo.retorno();
     }
 }

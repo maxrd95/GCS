@@ -19,7 +19,7 @@ public class DeberGCS {
         Scanner numero = new Scanner(System.in);          
         Metodo.Metodos metodo = new Metodo.Metodos();
         int valor;    
-        String cadena;     
+        String cadena,SoN;     
         System.out.println("====================================================Menú=========================================================");
         System.out.println("===== 1.-  Cálcular Metros o Kilometros de Millas Marinas.                                                 ======");
         System.out.println("===== 2.-  Área y el perímetro de un triángulo rectángulo.                                                 ======");
@@ -183,19 +183,17 @@ Al final muestre el resultado solicitado.
                     e50.mostrar();
                     break;
             default:                 
-                    System.out.println("Por favor ingrese un valor existente en el menu");
-                    Menu();
+                    System.out.println("Por favor ingrese un valor existente en el menu, s para continuar n para salir");                    
+                    
+                    SoN = metodo.SoN(SoN = numero.next().toLowerCase());
+                    if ("s".equals(SoN)) {
+                        Menu();
+                    }                    
                     break;
         }
      }     
     
-    public boolean validarNumeros(String cadena) {
-        if (cadena.matches("[0-9]*")) {
-         return true;
-        } else {
-         return false;
-        }
-    }
+    
     public static void main(String[] args) {        
         Menu();       
         Modulos.E2 e2 = new Modulos.E2();

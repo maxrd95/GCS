@@ -20,11 +20,8 @@ public class E2 {
     public void Millas_M(){
         System.out.println("Cálcular Metros o Kilometros de Millas Marinas");
         System.out.println("Ingrese un valor en Millas Marinas");
-        cadena =numero.next();
-        //boolean retorno = metodo.Decimales(cadena); 
-               
-        
-        valor = Double.parseDouble(cadena);
+        cadena =numero.next();        
+        valor = metodo.Doble(cadena);
         totalM = valor * 1852 ;
         Millas_KM(totalM);
     }
@@ -33,7 +30,9 @@ public class E2 {
         mostrar();
     }
     public void mostrar(){
+        totalM = Math.round(totalM*1000)/1000;
+        totalKM = Math.round(totalKM * 1000)/1000;
         System.out.println("Su valor en Metros es: " + totalM + " m\n" + "Su valor en Kilometros es: " + totalKM + " km");
-        Menu();
+        metodo.retorno();
     }
 }

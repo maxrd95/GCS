@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class Metodos {
     Scanner numero = new Scanner(System.in);
-    public String max(String cadena){        
+    public String max(String cadena){                  
         a:if (cadena.length()== 9){
                 System.out.println("Igrese valores que no sobrepasen el limite de la variable, máximo 9 dígitos");
                 cadena =numero.next();
@@ -61,5 +61,32 @@ public class Metodos {
             }
         }while(ban==1);
         return ValorD;
+    }
+    public void retorno(){
+        String Salida;
+        System.out.println("Presione s para continuar en el menú principal y n para salir");
+        Salida = numero.next();
+        Salida = SoN(Salida);
+        if ("s".equals(Salida) || "S".equals(Salida)) {
+            Menu();
+        }
+    }
+    public int NegativoE(int valor){
+        String Valor;
+        while (valor < 0) {
+            System.out.println("Ingrese un valor positivo");
+            Valor = numero.next();
+            valor = Entero(Valor);
+        }
+        return valor;
+    }
+    public double NegativoD(double valor){
+        String Valor;
+        while (valor < 0) {
+            System.out.println("Ingrese un valor positivo");
+            Valor = numero.next();
+            valor = Doble(Valor);
+        }
+        return valor;
     }
 }

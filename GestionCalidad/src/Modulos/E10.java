@@ -17,6 +17,7 @@ public class E10 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     int vehiculo;
     public void Datos(){
+        String Vehiculo;
         System.out.println("====Valor a pagar en la carretera dependiendo del vehiculo.====");
         System.out.println("= Calcular el valor a pagar de:                              =");
         System.out.println("= 1.Bicicleta                                                =");
@@ -26,10 +27,14 @@ public class E10 {
         System.out.println("= 5.Regresar                                                 =");
         System.out.println("==============================================================");
         System.out.println("= Seleccione una opción:                                     =");
-        vehiculo = numero.nextInt();
+        Vehiculo = numero.next();
+        vehiculo = metodo.Entero(Vehiculo);
+        vehiculo = metodo.NegativoE(vehiculo);
         a:if(vehiculo>4 || vehiculo < 1){
             System.out.println("Ingrese una opción válida: ");
-            vehiculo = numero.nextInt();
+            Vehiculo = numero.next();
+            vehiculo = metodo.Entero(Vehiculo);
+            vehiculo = metodo.NegativoE(vehiculo);;
             break a;
         }
         switch (vehiculo) {
@@ -50,7 +55,7 @@ public class E10 {
     }
     public void bicicleta(){
         System.out.println("Valor a pagar de su bicicleta : $0.50");
-        Datos();
+        metodo.retorno();
     }
     public void moto(){
         double km,valorPagar;
@@ -58,9 +63,10 @@ public class E10 {
         System.out.println("Ingrese los km recorridos:");
         KM = numero.next();
         km = metodo.Doble(KM);
+        km = metodo.NegativoD(km);
         valorPagar = km * 0.30;
         System.out.println("Valor a pagar de su moto : $ " + valorPagar);
-        Datos();
+        metodo.retorno();
     }
     public void carro(){
         double km,valorPagar;
@@ -68,9 +74,10 @@ public class E10 {
         System.out.println("Ingrese los km recorridos:");
         KM = numero.next();
         km = metodo.Doble(KM);
+        km = metodo.NegativoD(km);
         valorPagar = km * 0.30;
         System.out.println("Valor a pagar de su auto: $ " + valorPagar);
-        Datos();
+        metodo.retorno();
     }
     public void camion(){
         double km,tm,valorPagar;
@@ -78,11 +85,13 @@ public class E10 {
         System.out.println("Ingrese los km recorridos:");
         KM = numero.next();
         km = metodo.Doble(KM);
+        km = metodo.NegativoD(km);
         System.out.println("Ingrese las toneladas méricas:");
         TM = numero.next();
         tm = metodo.Doble(TM);
+        tm = metodo.NegativoD(tm);
         valorPagar = (km * 0.50) + (tm * 0.10);
         System.out.println("Valor a pagar de su camión: $ " + valorPagar);
-        Datos();
+        metodo.retorno();
     }
 }

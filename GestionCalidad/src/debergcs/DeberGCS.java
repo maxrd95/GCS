@@ -133,6 +133,25 @@ Al final muestre el resultado solicitado.
             case 15: Modulos.E30 e30 = new Modulos.E30();
                     e30.Datos();
                     break;
+            case 16: Modulos.E32 e32 = new Modulos.E32();
+                    e32.Datos();
+                    break;
+            case 17: Modulos.E34 e34 = new Modulos.E34();
+                    e34.Datos();
+                    break;
+            case 18: Modulos.E36 e36 = new Modulos.E36();
+                    e36.Datos();
+                    break;
+            case 19: Modulos.E38 e38 = new Modulos.E38();
+                    e38.Suma_Naturales();
+                    break;
+            case 20: Modulos.E40 e40 = new Modulos.E40();
+                    e40.Datos();
+                    break;
+            case 21: Modulos.E42 e42 = new Modulos.E42();
+                    e42.Datos();
+                    break;
+            
             default:                 
                     System.out.println("Por favor ingrese un valor existente en el menu");
                     Menu();

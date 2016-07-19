@@ -11,21 +11,25 @@ import java.util.Scanner;
  *
  * @author Riden
  */
-public class E30 {
+public class E32 {
     Scanner ValorPedido = new Scanner(System.in);
     Metodo.Metodos metodo = new Metodo.Metodos();
-    public void Datos(){     
+    public void Datos(){
         int N;
-        System.out.println("--------------Ejercicio 30--------------------");
+        System.out.println("-------------------Ejercicio 32 -------------------------");
         System.out.println("Ingrese un número N");
         N = ValorPedido.nextInt();
-        Mostrar(N);
+        Mostrar (N);
     }
-    public void Mostrar(int N){
-        int calcular=0;
-        for (int i = 20; i < N; i = i+2) {
-            calcular = calcular + i;
-        }
-        System.out.println(calcular);
+    public void Mostrar(int N){        
+        System.out.println("Multiplos de 5 : " );
+        for (int i = 0; i <= N; i++) {
+            if (i%5==0) {
+                if(i!=0){
+                    System.out.println(i);
+                }
+            }
+        }        
     }
+    
 }

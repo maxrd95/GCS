@@ -76,6 +76,7 @@ public class E10 {
         km = metodo.Doble(KM);
         km = metodo.NegativoD(km);
         valorPagar = km * 0.30;
+        valorPagar = Math.round(valorPagar * 100)/100;
         System.out.println("Valor a pagar de su auto: $ " + valorPagar);
         metodo.retorno();
     }
@@ -91,6 +92,7 @@ public class E10 {
         tm = metodo.Doble(TM);
         tm = metodo.NegativoD(tm);
         valorPagar = (km * 0.50) + (tm * 0.10);
+        valorPagar = Math.round(valorPagar * 100)/100;
         System.out.println("Valor a pagar de su camión: $ " + valorPagar);
         metodo.retorno();
     }

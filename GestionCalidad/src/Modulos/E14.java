@@ -19,17 +19,18 @@ public class E14 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     public void Datos(){        
         double numero1,numero2,numero3;
+        String N1,N2,N3;
         System.out.println("------------------Ejercicio 14-----------------------");
         System.out.println("Ingrese 3 números para calcular el mayor o el menor");
         System.out.println("Primer número");
-        numero1 = ValorPedido.nextDouble();
-        numero1 = metodo.Doble(String.valueOf(numero1));        
+        N1 = ValorPedido.next();
+        numero1 = metodo.Doble(N1);        
         System.out.println("Segundo número");
-        numero2 = ValorPedido.nextDouble();
-        numero2 = metodo.Doble(String.valueOf(numero2));        
+        N2 = ValorPedido.next();
+        numero2 = metodo.Doble(N2);        
         System.out.println("Tercer número");
-        numero3 = ValorPedido.nextDouble();
-        numero3 = metodo.Doble(String.valueOf(numero3));               
+        N3 = ValorPedido.next();
+        numero3 = metodo.Doble(N3);               
         mostrar(numero1,numero2,numero3);
     }
     public void mostrar(double numero1,double numero2,double numero3){
@@ -56,6 +57,6 @@ public class E14 {
                System.out.println("El menor es : " + numero3);
            }         
         } 
-        Datos();
+        metodo.retorno();
     }
 }

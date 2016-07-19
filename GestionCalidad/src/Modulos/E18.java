@@ -32,17 +32,20 @@ public class E18 {
             Grado = ValorPedido.next();        
         }               
         System.out.println("Ingrese el valor del grado");        
-        valorGrado = metodo.Doble(ValorGrado = ValorPedido.next());
+        valorGrado = metodo.Doble(ValorGrado = ValorPedido.next());        
+        Convertir(Grado,valorGrado);
         
     }
     public void Convertir(String Grado,double valor){
+        double Convertido;        
         if(("c".equals(Grado)) || "C".equals(Grado)){
-            //valor = valor 
-            System.out.println("El valor en grados Fahrenheit es : " + valor);
+            Convertido = (valor) * 33.8 ;
+            System.out.println("El valor en grados Fahrenheit es : " + Convertido);
         }else {
-            //valor = valor
-            System.out.println("El valor en grados centígrados es : " + valor);
+            System.out.println(valor);
+            Convertido = (valor - 32) * 0.5555555555555555555555;
+            System.out.println("El valor en grados centígrados es : " + Convertido);
         }
-        
+        metodo.retorno();
     }
 }

@@ -18,18 +18,19 @@ public class E12 {
     
     public void Datos(){                
         double Sueldo;
+        String sueldo;
         System.out.println("Ganancia neta de un trabajador dependiendo de su sueldo.");
         System.out.println("Ingrese el sueldo del trabajador: ");
-        Sueldo = numero.nextDouble();
-        Sueldo = metodo.Doble(String.valueOf(Sueldo));
+        sueldo = numero.next();        
+        Sueldo = metodo.Doble(sueldo);
+        Sueldo = metodo.NegativoD(Sueldo);        
         Mostrar(Sueldo);
     }
     public void Mostrar(double sueldo){
         double Descuento;
         if (sueldo <= 1000 ) {
             Descuento = sueldo * 0.10;
-            sueldo = sueldo - Descuento;
-             
+            sueldo = sueldo - Descuento;                         
         }else if(sueldo > 1000 || sueldo <= 2000){
             Descuento = (sueldo * 0.10) + (sueldo * 0.05);
             sueldo = sueldo - Descuento;
@@ -37,8 +38,10 @@ public class E12 {
             Descuento = (sueldo * 0.10) + (sueldo * 0.05) + (sueldo * 0.03);
             sueldo = sueldo - Descuento;
         }
+        sueldo=Math.round(sueldo * 100 ) /100;
+        Descuento = Math.round(Descuento * 100)/100;
         System.out.println("Su Descuento es de : " + Descuento + "\n" 
                 + "Su sueldo neto es : " + sueldo);
-        Menu();
+        metodo.retorno();
     }
 }

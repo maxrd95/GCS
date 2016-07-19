@@ -22,24 +22,29 @@ public class Metodos {
             }
         return cadena;
     }
-    public String Enteros(String cadena){                
-        if (!cadena.matches("[0-9]*")) {           
-            System.out.println("Solo se pueden ingresar valores numéricos");
-            return "t";
-        }       
-        return "a";
+    
+    public String SoN (String valor){
+        while(!("s".equals(valor)) && !("n").equals(valor)){
+            System.out.println("Solo puede ingresar s para continuar o n para salir");
+            valor = numero.next();
+        }
+        return valor;
     }
-    public String ValorEntero(String retorno,String cadena1){ 
-        if (cadena1.matches("[0-9]*")) {           
-            return cadena1;
-        }     
-        Enteros(cadena1);                
-        while(retorno == "t"){                        
-            cadena1 = numero.next();                    
-            retorno = Enteros(cadena1);            
-        }        
-        return cadena1;
-    }    
+    
+    public int Entero(String valor){
+        int valorD=0,ban=0;
+        do{            
+            try{ 
+                   ban=0;
+                   valorD = Integer.parseInt(valor); 
+            } catch(NumberFormatException nfe) { 
+            System.out.println("No es de tipo entero");
+            valor = numero.next();
+            ban=1;
+            }
+        }while(ban==1);
+        return valorD;
+    }
     
     public double Doble(String valor){
         double ValorD=0.0;
@@ -50,7 +55,7 @@ public class Metodos {
                    ban=0;
                    ValorD = Double.parseDouble(valor); 
             } catch(NumberFormatException nfe) { 
-            System.out.println("No es de tipo double");
+            System.out.println("No es un número ");
             valor = numero.next();
             ban=1;
             }

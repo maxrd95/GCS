@@ -5,6 +5,7 @@
  */
 package Modulos;
 
+import static debergcs.DeberGCS.Menu;
 import java.util.Scanner;
 
 /**
@@ -17,6 +18,7 @@ import java.util.Scanner;
 public class E16 {
     Scanner ValorPedido = new Scanner(System.in);
     Metodo.Metodos metodo = new Metodo.Metodos();
+    String Salida;
     public void Datos(){
         String Numero;
         System.out.println("--------------Ejercicio 16-------------");
@@ -26,16 +28,28 @@ public class E16 {
     }
     public void validacion(String Numero){
         double Valor;
-        if(Numero.matches("[0-9]*")){
+        Valor = metodo.Doble(Numero);
+        if(Valor%1==0){
             System.out.println("Entero");
         }else{
             System.out.println("Decimal");
-        }
-        if (Numero.matches("[.]")) {
+        }        
+        
+        if (Valor < 0) {
             System.out.println("Negativo");
         }else{
             System.out.println("Positivo");
         }
-        
+        if (Valor%2==0) {
+            System.out.println("Par");
+        }else{
+            System.out.println("Impar");
+        }
+        System.out.println("Presione s para continuar en el menú principal y n para salir");
+        Salida = ValorPedido.next();
+        Salida = metodo.SoN(Salida);
+        if ("s".equals(Salida) || "S".equals(Salida)) {
+            Menu();
+        }
     }
 }

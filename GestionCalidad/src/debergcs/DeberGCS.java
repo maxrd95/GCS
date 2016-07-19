@@ -53,9 +53,8 @@ public class DeberGCS {
         System.out.println("=================================================================================================================");     
         System.out.println("=====     Elige una opción del Menú:                                                                       ======");             
         cadena =numero.next();
-        cadena = metodo.max(cadena);
-        cadena = metodo.ValorEntero("t",cadena);       
-        valor = Integer.parseInt(cadena);
+        cadena = metodo.max(cadena);        
+        valor = metodo.Entero(cadena);
         switch (valor) {
             /*Diseñar un programa que lea el valor correspondiente a una distancia en millas marinas y 
             las escriba expresadas en metros y en kilómetros. Sabiendo que 1 milla marina equivale a 1852 metros.*/

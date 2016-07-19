@@ -16,7 +16,7 @@ public class E40 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     public void Datos(){
         int A,N;
-        System.out.println("-----------Ejercicio--------------");
+        System.out.println("Mostrar el resultado de la siguiente fórmula");
         System.out.println("Ingrese el valor de A y N para la siguiente formula S = ( A - 1)1 + ( A - 2)2 + ( A - 3)3 + ……..( A - N)N");
         System.out.println("Ingrese el valor de A");
         A = ValorPedido.nextInt();

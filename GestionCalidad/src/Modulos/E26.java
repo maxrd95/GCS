@@ -20,12 +20,12 @@ public class E26 {
         ArrayList<Integer> Numero;
         Numero = new ArrayList<Integer>();        
         String salir;
-        System.out.println("--------------ejercicio 26-------------");
+        System.out.println("Suma y Media de un conjunto de números ingresados");
         System.out.println("Ingrese números y para salir escriba s");
         for (int i = 0; i < 20; i++) {
             salir = ValorPedido.next();            
             
-            if ("s".equals(salir)) {
+            if (("s".equals(salir))||("S".equals(salir))) {
                 i = 20;
             }else{
                 Numero.add(Integer.parseInt(salir));
@@ -41,7 +41,7 @@ public class E26 {
             suma = valor + suma;            
         }
         valorMedio = suma/Numeros.size();
-        System.out.println("La suma total es : " + suma);
-        System.out.println("El valor medio es : " + valorMedio);
+        System.out.println("La suma total es: " + suma);
+        System.out.println("El valor medio es: " + valorMedio);
     }
 }

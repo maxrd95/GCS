@@ -16,8 +16,8 @@ public class E28 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     public void Datos(){
         int nFilas;
-        System.out.println("-------------Ejercicio 28-----------------");
-        System.out.println("Ingrese filas para el triangulo");
+        System.out.println("Triángulo N filas");
+        System.out.println("Ingrese un número de fila para el triángulo");
         nFilas = ValorPedido.nextInt();
         Dibujar(nFilas);
     }

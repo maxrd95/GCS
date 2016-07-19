@@ -16,7 +16,7 @@ public class E44 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     public void Datos(){
         int N;
-        System.out.println("-------------Ejercico 44-------------------");
+        System.out.println("Mostrar el resultado de la siguiente fórmula");
         System.out.println("Ingrese un valor N para S =  1! +2! + 3! +  ...............+ N!");
         N = ValorPedido.nextInt();
         calcular(N);

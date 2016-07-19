@@ -16,7 +16,7 @@ public class E24 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     public void Datos(){
         int numeroTabla;
-        System.out.println("----------Ejercicio 24----------------");
+        System.out.println("Realice un programa que liste la tabla de sumar entre el 0 y 9 de cualquier número ingresado");
         System.out.println("Ingrese el número del que desea ver la tabla de sumar");
         numeroTabla = ValorPedido.nextInt();
         mostrar(numeroTabla);

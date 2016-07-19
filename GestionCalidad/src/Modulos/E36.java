@@ -20,11 +20,11 @@ public class E36 {
         Numero = new ArrayList<Integer>();  
         String valor;
         int ban=0;
-        System.out.println("------------------Ejercicio 36---------------------");
+        System.out.println("Encuentre y Muestre la segunda cantidad mayor de las N cantidades positivas ingresadas ");
         System.out.println("Ingrese N cantidades positivas y precione s para cuando desee salir");
         while(ban == 0 ){
             valor = ValorPedido.next();            
-            if ("s".equals(valor)) {
+            if (("s".equals(valor))||("S".equals(valor))) {
                 ban=1;
             }else{
                 Numero.add(Integer.parseInt(valor));

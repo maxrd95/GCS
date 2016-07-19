@@ -12,7 +12,7 @@ package Modulos;
 public class E48 {
     public void calculo(){
         int suma=0,contador = 1,valor=0,contador2 = 0,ban=0;
-        System.out.println("-------------------ejercicio 48-------------------");
+        System.out.println("Calcular los 5 primeros números perfectos");
         while(ban==0){
             valor=valor + 1;
             while(contador < valor){

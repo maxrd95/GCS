@@ -16,8 +16,8 @@ public class E34 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     public void Datos(){
         int N;
-        System.out.println("----------Ejercicio 34------------------");
-        System.out.println("Ingrese un valor entero");
+        System.out.println("Ingreso de un valor entero e indique si dicho valor es primo o no");
+        System.out.println("Ingrese el valor entero");
         N = ValorPedido.nextInt();  
         mostrar(N);
     }

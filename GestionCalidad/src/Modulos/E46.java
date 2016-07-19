@@ -16,7 +16,7 @@ public class E46 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     public void Datos(){
         int valorPerfecto;
-        System.out.println("----------Ejercicio 46---------------");
+        System.out.println("Número Perfecto de un solo valor ingresado");
         System.out.println("Ingrese el valor para verificar si es o no es perfecto");
         valorPerfecto = ValorPedido.nextInt();
         calculo(valorPerfecto);

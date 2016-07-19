@@ -157,6 +157,9 @@ Al final muestre el resultado solicitado.
             case 23: Modulos.E46 e46 = new Modulos.E46();
                     e46.Datos();
                     break;
+            case 24: Modulos.E48 e48 = new Modulos.E48();
+                    e48.calculo();
+                    break;
             
             default:                 
                     System.out.println("Por favor ingrese un valor existente en el menu");

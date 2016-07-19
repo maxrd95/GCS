@@ -182,7 +182,7 @@ Al final muestre el resultado solicitado.
                     break;
             
             default:                 
-                    System.out.println("Por favor ingrese un valor existente en el menu");
+                    System.out.println("Por favor ingrese un valor existente en el menú");
                     Menu();
                     break;
         }

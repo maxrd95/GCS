@@ -1,4 +1,4 @@
-/*
+    /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -20,8 +20,8 @@ public class E8 {
     double litrosKM,DineroKM,litros100KM,Dinero100KM,HorasTotal,KMrecorrido,Gasolina,DineroGastado;
     String kmrecorrido,gasolina,dineroGastado;
     public void Variables(){
-        //Imgreso de variables
-        System.out.println("---------------------Ejercicio 8-----------------------");
+     
+        System.out.println("Consumo de conbustible.    ");
         System.out.println("Total de KM recorridos");
         kmrecorrido = numero.next();        
         KMrecorrido=metodo.Doble(kmrecorrido);                 
@@ -31,9 +31,10 @@ public class E8 {
         System.out.println("Dinero de la gasolina gastado en el viaje");
         dineroGastado = numero.next();
         DineroGastado=metodo.Doble(dineroGastado);
-        System.out.println("tiempo que se ha tardado (en horas y minutos)");
+        System.out.println("Tiempo que se ha tardado (en horas y minutos)");
+        System.out.println("Ingrese la/s hora/s transcurrida/s");
         Horas = numero.nextInt();
-        System.out.println(":");
+        System.out.println("Ingrese el/los minuto/s transcurrido/s");
         Minutos = numero.nextInt();
         Consumokm();        
     }

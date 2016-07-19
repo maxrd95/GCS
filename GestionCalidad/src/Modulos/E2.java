@@ -18,7 +18,7 @@ public class E2 {
     String cadena;
     double valor,totalM,totalKM;
     public void Millas_M(){
-        System.out.println("------------------Ejercicio 2-----------------------------");
+        System.out.println("Cálcular Metros o Kilometros de Millas Marinas");
         System.out.println("Ingrese un valor en Millas Marinas");
         cadena =numero.next();
         //boolean retorno = metodo.Decimales(cadena); 
@@ -33,7 +33,7 @@ public class E2 {
         mostrar();
     }
     public void mostrar(){
-        System.out.println("Su valor en Metos es: " + totalM + "M\n" + "Su valor en Kilometros es: " + totalKM + "KM");
+        System.out.println("Su valor en Metros es: " + totalM + " m\n" + "Su valor en Kilometros es: " + totalKM + " km");
         Menu();
     }
 }

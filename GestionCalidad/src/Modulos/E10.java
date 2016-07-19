@@ -17,17 +17,18 @@ public class E10 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     int vehiculo;
     public void Datos(){
-        System.out.println("-------------Ejercicio 10 ---------------");
-        System.out.println("======Calcular el valor a pagar de:======");
-        System.out.println("=====1.Bicicleta                   =======");
-        System.out.println("=====2.Moto                        =======");
-        System.out.println("=====3.Carro                       =======");
-        System.out.println("=====4.Caminón                     =======");
-        System.out.println("=====4.Regrersar                   =======");
-        System.out.println("=====Ingrese el número del vehículo=======");
+        System.out.println("====Valor a pagar en la carretera dependiendo del vehiculo.====");
+        System.out.println("= Calcular el valor a pagar de:                              =");
+        System.out.println("= 1.Bicicleta                                                =");
+        System.out.println("= 2.Moto                                                     =");
+        System.out.println("= 3.Auto                                                     =");
+        System.out.println("= 4.Camión                                                  =");
+        System.out.println("= 5.Regresar                                                 =");
+        System.out.println("==============================================================");
+        System.out.println("= Seleccione una opción:                                     =");
         vehiculo = numero.nextInt();
         a:if(vehiculo>4 || vehiculo < 1){
-            System.out.println("Ingrese el número del vehículo correcto");
+            System.out.println("Ingrese una opción válida: ");
             vehiculo = numero.nextInt();
             break a;
         }
@@ -58,7 +59,7 @@ public class E10 {
         KM = numero.next();
         km = metodo.Doble(KM);
         valorPagar = km * 0.30;
-        System.out.println("Valor a pagar de su moto : $" + valorPagar);
+        System.out.println("Valor a pagar de su moto : $ " + valorPagar);
         Datos();
     }
     public void carro(){
@@ -68,7 +69,7 @@ public class E10 {
         KM = numero.next();
         km = metodo.Doble(KM);
         valorPagar = km * 0.30;
-        System.out.println("Valor a pagar de su carro : $" + valorPagar);
+        System.out.println("Valor a pagar de su auto: $ " + valorPagar);
         Datos();
     }
     public void camion(){
@@ -77,11 +78,11 @@ public class E10 {
         System.out.println("Ingrese los km recorridos:");
         KM = numero.next();
         km = metodo.Doble(KM);
-        System.out.println("Ingrese las toneladas metricas:");
+        System.out.println("Ingrese las toneladas méricas:");
         TM = numero.next();
         tm = metodo.Doble(TM);
         valorPagar = (km * 0.50) + (tm * 0.10);
-        System.out.println("Valor a pagar de su camión : $" + valorPagar);
+        System.out.println("Valor a pagar de su camión: $ " + valorPagar);
         Datos();
     }
 }

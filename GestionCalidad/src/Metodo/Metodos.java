@@ -16,7 +16,7 @@ public class Metodos {
     Scanner numero = new Scanner(System.in);
     public String max(String cadena){        
         a:if (cadena.length()== 9){
-                System.out.println("Igrese valores que no sobrepasen el limite de la variable, maximo 9 digitos");
+                System.out.println("Igrese valores que no sobrepasen el limite de la variable, máximo 9 dígitos");
                 cadena =numero.next();
                 break a;             
             }
@@ -24,7 +24,7 @@ public class Metodos {
     }
     public String Enteros(String cadena){                
         if (!cadena.matches("[0-9]*")) {           
-            System.out.println("Solo se pueden ingresar valores numericos");
+            System.out.println("Solo se pueden ingresar valores numéricos");
             return "t";
         }       
         return "a";

@@ -18,6 +18,7 @@ public class E12 {
     
     public void Datos(){                
         double Sueldo;
+        System.out.println("Ganancia neta de un trabajador dependiendo de su sueldo.");
         System.out.println("Ingrese el sueldo del trabajador: ");
         Sueldo = numero.nextDouble();
         Sueldo = metodo.Doble(String.valueOf(Sueldo));

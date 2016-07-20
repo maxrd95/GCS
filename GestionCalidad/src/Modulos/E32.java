@@ -16,10 +16,14 @@ public class E32 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     public void Datos(){
         int N;
-        System.out.println("-------------------Ejercicio 32 -------------------------");
+        System.out.println("Múltiplos de 5 entre 1 y N");
         System.out.println("Ingrese un número N");
         N = ValorPedido.nextInt();
+        if (N<5) {
+            System.out.println("No hay multiplos de 5 para: " +N);
+        }else{
         Mostrar (N);
+        }
     }
     public void Mostrar(int N){        
         System.out.println("Multiplos de 5 : " );

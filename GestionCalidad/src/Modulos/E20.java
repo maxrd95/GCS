@@ -20,7 +20,7 @@ public class E20 {
         int Billetes100,Billetes20,Billetes10,Billetes5,Billetes1;
         String ValorArticulo;
         double valorArticulo;
-        System.out.println("------------------Ejercicio 20-----------------");
+        System.out.println("Calculando dinero es Suficiente? o Insuficiente?");
         System.out.println("Pedir cuantos billetes de 100, 20, 10, 5 y 1 tiene la persona en el bolsillo");
         System.out.println("Billetes de 100");
         Billetes100 = ValorPedido.nextInt();
@@ -45,7 +45,8 @@ public class E20 {
             System.out.println("Su vuelto es : " + vuelto);
         }else{
             vuelto = valor - suma;
-            System.out.println("Te falta dinero " + vuelto);
+            System.out.println("Te falta dinero");
+            System.out.println("Necesitas $"+vuelto+ " para comprar el artículo");
         }
     }
 }

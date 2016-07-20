@@ -24,11 +24,11 @@ public class E18 {
     public void Datos(){
         String Grado,ValorGrado;
         double valorGrado;
-        System.out.println("-------------Ejercicio 18-------------");
+        System.out.println("Grados Centigrados a Fahrenheit o Viceversa");
         System.out.println("Ingrese C para grados centígrados o F para grados Fahrenheit");
         Grado = ValorPedido.next();
         while(!("c".equals(Grado)) && !("f".equals(Grado)) && !("F".equals(Grado)) && !("C".equals(Grado))){
-            System.out.println("Ingrese valor valido c o f");
+            System.out.println("Ingrese un valor válido c o f");
             Grado = ValorPedido.next();        
         }               
         System.out.println("Ingrese el valor del grado");        

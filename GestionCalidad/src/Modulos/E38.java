@@ -15,8 +15,9 @@ public class E38 {
     Scanner ValorPedido = new Scanner(System.in);
     Metodo.Metodos metodo = new Metodo.Metodos();
     public void Suma_Naturales(){
+        System.out.println("Calcular la suma de los N primeros números naturales");
         int suma,N=9,contador=0;
         suma = (N*(N + 1))/2;
-        System.out.println("La suma es : " + suma);
+        System.out.println("La suma es: " + suma);
     }
 }

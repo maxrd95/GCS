@@ -21,8 +21,8 @@ public class E16 {
     
     public void Datos(){
         String Numero;
-        System.out.println("--------------Ejercicio 16-------------");
-        System.out.println("Ingrese el número que desea evaluar");
+        System.out.println("Par o Impar, Entero o Decimal, Positivo o Negativo");
+        System.out.println("Ingrese el número que desea evaluar: ");
         Numero = ValorPedido.next();
         validacion(Numero);
     }

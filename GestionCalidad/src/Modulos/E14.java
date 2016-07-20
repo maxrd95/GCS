@@ -21,24 +21,24 @@ public class E14 {
         double numero1,numero2,numero3;
         String N1,N2,N3;
         System.out.println("------------------Ejercicio 14-----------------------");
-        System.out.println("Ingrese 3 números para calcular el mayor o el menor");
-        System.out.println("Primer número");
+        System.out.println("Ingrese 3 números para calcular el mayor o el menor");        
+        System.out.println("Ingrese primer valor");
         N1 = ValorPedido.next();
-        numero1 = metodo.Doble(N1);        
-        System.out.println("Segundo número");
+        numero1 = metodo.Doble(N1);  
+        System.out.println("Ingrese segundo valor");
         N2 = ValorPedido.next();
-        numero2 = metodo.Doble(N2);        
-        System.out.println("Tercer número");
+        numero2 = metodo.Doble(N2);   
+        System.out.println("Ingrese tercer valor");
         N3 = ValorPedido.next();
         numero3 = metodo.Doble(N3);               
         mostrar(numero1,numero2,numero3);
     }
     public void mostrar(double numero1,double numero2,double numero3){
         int eleccion;
-        System.out.println("======Cual numero desea ver=====");
-        System.out.println("========1)Mayor            =====");
-        System.out.println("========2)Menor            =====");
-        System.out.println("==Elija una de las 2 opciones==");
+        System.out.println("===  Cual numero desea ver   ===");
+        System.out.println("= 1)Mayor                      =");
+        System.out.println("= 2)Menor                      =");
+        System.out.println("= Elija una de las 2 opciones  =");
         eleccion = ValorPedido.nextInt();                
         if(eleccion==1){
            if(numero1 > numero2 && numero1 > numero3){

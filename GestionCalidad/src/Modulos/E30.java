@@ -16,7 +16,7 @@ public class E30 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     public void Datos(){     
         int N;
-        System.out.println("--------------Ejercicio 30--------------------");
+        System.out.println("Calcular y Mostrar la suma de los números pares comprendidos entre 20 y N");
         System.out.println("Ingrese un número N");
         N = ValorPedido.nextInt();
         Mostrar(N);
@@ -27,5 +27,6 @@ public class E30 {
             calcular = calcular + i;
         }
         System.out.println(calcular);
+        
     }
 }

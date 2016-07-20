@@ -16,7 +16,7 @@ public class E42 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     public void Datos(){
         int N;
-        System.out.println("-----------Ejercicio 42---------------");
+        System.out.println("Mostrar el resultado de la siguiente fórmula");
         System.out.println("Ingrese un valor N para S =  1/2 +2/4  + 3/6 +  ...............+ N/(N*2) ");
         N = ValorPedido.nextInt();
         calcular(N);

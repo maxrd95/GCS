@@ -18,12 +18,13 @@ public class E22 {
         String valor;
         double valorVehiculo;
         int Depreciacion;
-        System.out.println("-----------Ejercicio 22-----------------------");
+        System.out.println("Depreciación del vehiculo por año");
         System.out.println("Ingrese el valor del vehículo");
         valorVehiculo = metodo.Doble(valor = ValorPedido.next());
         System.out.println("Años de depreciación");
         Depreciacion = ValorPedido.nextInt();
         Calculo(Depreciacion,valorVehiculo);
+       
     }
     public void Calculo(int Depreciacion, double valorVehiculo){
         int sumatoria;
@@ -33,6 +34,7 @@ public class E22 {
         for (int i = 0; i < Depreciacion; i++) {            
             Valor = (Depreciacion - i)/(sumatoria * valorVehiculo);
             System.out.println("===== Depreciación " + (i+1) + " año : " + Valor);
+            
         }        
-    }
+   }
 }

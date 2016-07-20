@@ -6,6 +6,7 @@
 package Modulos;
 
 import static debergcs.DeberGCS.Menu;
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -15,6 +16,7 @@ import java.util.Scanner;
 public class E10 {
     Scanner numero = new Scanner(System.in);
     Metodo.Metodos metodo = new Metodo.Metodos();
+    DecimalFormat decimales = new DecimalFormat("0.00");
     int vehiculo;
     public void Datos(){
         String Vehiculo;
@@ -23,8 +25,7 @@ public class E10 {
         System.out.println("= 1.Bicicleta                                                =");
         System.out.println("= 2.Moto                                                     =");
         System.out.println("= 3.Auto                                                     =");
-        System.out.println("= 4.Camión                                                  =");
-        System.out.println("= 5.Regresar                                                 =");
+        System.out.println("= 4.Camión                                                  =");        
         System.out.println("==============================================================");
         System.out.println("= Seleccione una opción:                                     =");
         Vehiculo = numero.next();
@@ -65,7 +66,7 @@ public class E10 {
         km = metodo.Doble(KM);
         km = metodo.NegativoD(km);
         valorPagar = km * 0.30;
-        System.out.println("Valor a pagar de su moto : $ " + valorPagar);
+        System.out.println("Valor a pagar de su moto : $ " + decimales.format(valorPagar));
         metodo.retorno();
     }
     public void carro(){
@@ -75,9 +76,8 @@ public class E10 {
         KM = numero.next();
         km = metodo.Doble(KM);
         km = metodo.NegativoD(km);
-        valorPagar = km * 0.30;
-        valorPagar = Math.round(valorPagar * 100)/100;
-        System.out.println("Valor a pagar de su auto: $ " + valorPagar);
+        valorPagar = km * 0.30;        
+        System.out.println("Valor a pagar de su auto: $ " + decimales.format(valorPagar));
         metodo.retorno();
     }
     public void camion(){
@@ -91,9 +91,8 @@ public class E10 {
         TM = numero.next();
         tm = metodo.Doble(TM);
         tm = metodo.NegativoD(tm);
-        valorPagar = (km * 0.50) + (tm * 0.10);
-        valorPagar = Math.round(valorPagar * 100)/100;
-        System.out.println("Valor a pagar de su camión: $ " + valorPagar);
+        valorPagar = (km * 0.50) + (tm * 0.10);        
+        System.out.println("Valor a pagar de su camión: $ " + decimales.format(valorPagar));
         metodo.retorno();
     }
 }

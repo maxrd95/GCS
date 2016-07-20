@@ -23,10 +23,13 @@ public class E22 {
         valorVehiculo = metodo.Doble(valor = ValorPedido.next());
         valorVehiculo = metodo.NegativoD(valorVehiculo);
         System.out.println("Años de depreciación");       
-        while(Depreciacion >= 1){
+        while(Depreciacion < 1){
             depreciacion = ValorPedido.next();
             Depreciacion = metodo.Entero(depreciacion);
             Depreciacion = metodo.NegativoE(Depreciacion);
+            if (Depreciacion < 1) {
+                System.out.println("Ingrese un año igual o mayor a 1");
+            }
         }
         Calculo(Depreciacion,valorVehiculo);
        
@@ -40,6 +43,7 @@ public class E22 {
             Valor = (Depreciacion - i)/(sumatoria * valorVehiculo);
             System.out.println("===== Depreciación " + (i+1) + " año : " + Valor);
             
-        }        
+        }    
+        metodo.retorno();
    }
 }

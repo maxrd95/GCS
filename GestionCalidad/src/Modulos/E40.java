@@ -25,10 +25,12 @@ public class E40 {
         calcular(A,N);
     }
     public void calcular(int A,int N){
-        int S=0,contador=0;        
+        int contador=0;
+        double s,S=0;
         while(contador<N){
             contador++;
-            S = S + ((A-contador)*contador);
+            s = (A-contador);
+            S = S + Math.pow(s,contador);
         }
         System.out.println("El valor de S es : " + S);
     }

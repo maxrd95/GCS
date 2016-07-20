@@ -15,10 +15,18 @@ public class E24 {
     Scanner ValorPedido = new Scanner(System.in);
     Metodo.Metodos metodo = new Metodo.Metodos();
     public void Datos(){
-        int numeroTabla;
+        int numeroTabla=10;
+        String numero;
         System.out.println("Realice un programa que liste la tabla de sumar entre el 0 y 9 de cualquier número ingresado");
         System.out.println("Ingrese el número del que desea ver la tabla de sumar");
-        numeroTabla = ValorPedido.nextInt();
+        
+        while(numeroTabla < 0 || numeroTabla >9){
+            numero = ValorPedido.next();
+            numeroTabla = metodo.Entero(numero);
+            if (numeroTabla < 0 || numeroTabla >9) {
+                System.out.println("Ingrese un valor 0-9");
+            }
+        }
         mostrar(numeroTabla);
     }
     public void mostrar(int tabla){
@@ -28,5 +36,6 @@ public class E24 {
             total = i + tabla;
             System.out.println(i + " + " + tabla + " = " + total);
         }
+        metodo.retorno();
     }
 }

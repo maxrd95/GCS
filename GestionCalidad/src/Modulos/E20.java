@@ -18,20 +18,31 @@ public class E20 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     public void Datos(){
         int Billetes100,Billetes20,Billetes10,Billetes5,Billetes1;
+        String B100,B20,B10,B5,B1;
         String ValorArticulo;
         double valorArticulo;
         System.out.println("Calculando dinero es Suficiente? o Insuficiente?");
         System.out.println("Pedir cuantos billetes de 100, 20, 10, 5 y 1 tiene la persona en el bolsillo");
         System.out.println("Billetes de 100");
-        Billetes100 = ValorPedido.nextInt();
+        B100 = ValorPedido.next();
+        Billetes100 = metodo.Entero(B100);
+        Billetes100 = metodo.NegativoE(Billetes100);
         System.out.println("Billetes de 20");
-        Billetes20 = ValorPedido.nextInt();
+        B20 = ValorPedido.next();
+        Billetes20 = metodo.Entero(B20);
+        Billetes20 = metodo.NegativoE(Billetes20);
         System.out.println("Billetes de 10");
-        Billetes10 = ValorPedido.nextInt();
+        B10 = ValorPedido.next();
+        Billetes10 = metodo.Entero(B10);
+        Billetes10 = metodo.NegativoE(Billetes10);
         System.out.println("Billetes de 5");
-        Billetes5 = ValorPedido.nextInt();
+        B5 = ValorPedido.next();
+        Billetes5 = metodo.Entero(B5);
+        Billetes5 = metodo.NegativoE(Billetes5);
         System.out.println("Billetes de 1");
-        Billetes1 = ValorPedido.nextInt();
+        B1 = ValorPedido.next();
+        Billetes1 = metodo.Entero(B1);
+        Billetes1 = metodo.NegativoE(Billetes1);
         System.out.println("Valor del articulo");
         valorArticulo = metodo.Doble(ValorArticulo = ValorPedido.next());
         calcular(Billetes100,Billetes20,Billetes10,Billetes5,Billetes1,valorArticulo);
@@ -48,5 +59,6 @@ public class E20 {
             System.out.println("Te falta dinero");
             System.out.println("Necesitas $"+vuelto+ " para comprar el artículo");
         }
+        metodo.retorno();
     }
 }

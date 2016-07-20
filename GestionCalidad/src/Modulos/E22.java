@@ -15,14 +15,19 @@ public class E22 {
     Scanner ValorPedido = new Scanner(System.in);
     Metodo.Metodos metodo = new Metodo.Metodos();
     public void Datos(){
-        String valor;
+        String valor,depreciacion;
         double valorVehiculo;
-        int Depreciacion;
+        int Depreciacion=0;
         System.out.println("Depreciación del vehiculo por año");
         System.out.println("Ingrese el valor del vehículo");
         valorVehiculo = metodo.Doble(valor = ValorPedido.next());
-        System.out.println("Años de depreciación");
-        Depreciacion = ValorPedido.nextInt();
+        valorVehiculo = metodo.NegativoD(valorVehiculo);
+        System.out.println("Años de depreciación");       
+        while(Depreciacion >= 1){
+            depreciacion = ValorPedido.next();
+            Depreciacion = metodo.Entero(depreciacion);
+            Depreciacion = metodo.NegativoE(Depreciacion);
+        }
         Calculo(Depreciacion,valorVehiculo);
        
     }

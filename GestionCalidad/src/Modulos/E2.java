@@ -24,6 +24,7 @@ public class E2 {
         System.out.println("Ingrese un valor en Millas Marinas");
         cadena =numero.next();        
         valor = metodo.Doble(cadena);
+        valor = metodo.NegativoD(valor);
         totalM = valor * 1852 ;
         Millas_KM(totalM);
     }

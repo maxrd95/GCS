@@ -5,6 +5,7 @@
  */
 package Modulos;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -21,6 +22,7 @@ import java.util.Scanner;
 public class E18 {
     Scanner ValorPedido = new Scanner(System.in);
     Metodo.Metodos metodo = new Metodo.Metodos();
+    DecimalFormat decimales = new DecimalFormat("0.000");
     public void Datos(){
         String Grado,ValorGrado;
         double valorGrado;
@@ -39,12 +41,11 @@ public class E18 {
     public void Convertir(String Grado,double valor){
         double Convertido;        
         if(("c".equals(Grado)) || "C".equals(Grado)){
-            Convertido = (valor) * 33.8 ;
-            System.out.println("El valor en grados Fahrenheit es : " + Convertido);
-        }else {
-            System.out.println(valor);
+            Convertido = (1.8 * valor) + 32  ;
+            System.out.println("El valor en grados Fahrenheit es : " + decimales.format(Convertido));
+        }else {            
             Convertido = (valor - 32) * 0.5555555555555555555555;
-            System.out.println("El valor en grados centígrados es : " + Convertido);
+            System.out.println("El valor en grados centígrados es : " + decimales.format(Convertido));
         }
         metodo.retorno();
     }

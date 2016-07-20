@@ -5,6 +5,7 @@
  */
 package Modulos;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -17,6 +18,7 @@ import java.util.Scanner;
 public class E14 {
     Scanner ValorPedido = new Scanner(System.in);
     Metodo.Metodos metodo = new Metodo.Metodos();
+    DecimalFormat decimales = new DecimalFormat("0.0000");
     public void Datos(){        
         double numero1,numero2,numero3;
         String N1,N2,N3;
@@ -42,19 +44,19 @@ public class E14 {
         eleccion = ValorPedido.nextInt();                
         if(eleccion==1){
            if(numero1 > numero2 && numero1 > numero3){
-               System.out.println("El mayor es : " + numero1);
+               System.out.println("El mayor es : " + decimales.format(numero1));
            }else if(numero2 > numero3){
-               System.out.println("El mayor es : " + numero2);
+               System.out.println("El mayor es : " + decimales.format(numero2));
            }else{
-               System.out.println("El mayor es : " + numero3);
+               System.out.println("El mayor es : " + decimales.format(numero3));
            }           
         }else{
             if(numero1 < numero2 && numero1 < numero3){
-               System.out.println("El menor es : " + numero1);
+               System.out.println("El menor es : " + decimales.format(numero1));
            }else if(numero2 < numero3){
-               System.out.println("El menor es : " + numero2);
+               System.out.println("El menor es : " + decimales.format(numero2));
            }else{
-               System.out.println("El menor es : " + numero3);
+               System.out.println("El menor es : " + decimales.format(numero3));
            }         
         } 
         metodo.retorno();

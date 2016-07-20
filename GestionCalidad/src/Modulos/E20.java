@@ -5,6 +5,7 @@
  */
 package Modulos;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -16,6 +17,7 @@ import java.util.Scanner;
 public class E20 {
     Scanner ValorPedido = new Scanner(System.in);
     Metodo.Metodos metodo = new Metodo.Metodos();
+    DecimalFormat decimales = new DecimalFormat("0.000");
     public void Datos(){
         int Billetes100,Billetes20,Billetes10,Billetes5,Billetes1;
         String B100,B20,B10,B5,B1;
@@ -53,11 +55,11 @@ public class E20 {
         suma = (B100 * 100) + (B20 * 20) + (B10 * 10) + (B5 * 5) + (B1 * 1);
         if (valor < suma) {
             vuelto = suma - valor;
-            System.out.println("Su vuelto es : " + vuelto);
+            System.out.println("Su vuelto es : " + decimales.format(vuelto));
         }else{
             vuelto = valor - suma;
             System.out.println("Te falta dinero");
-            System.out.println("Necesitas $"+vuelto+ " para comprar el artículo");
+            System.out.println("Necesitas $"+decimales.format(vuelto)+ " para comprar el artículo");
         }
         metodo.retorno();
     }

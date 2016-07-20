@@ -17,10 +17,10 @@ import java.util.Scanner;
 public class E8 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     Scanner numero = new Scanner(System.in);
-    int Horas,Minutos=61,VelocidadKMH,VelocidadMS;
-    double litrosKM,DineroKM,litros100KM,Dinero100KM,HorasTotal,KMrecorrido,Gasolina=0,DineroGastado;
+    int Horas,Minutos=61;
+    double litrosKM,DineroKM,litros100KM,Dinero100KM,HorasTotal,KMrecorrido,Gasolina=0,DineroGastado,VelocidadKMH,VelocidadMS;
     String kmrecorrido,gasolina,dineroGastado,horas,minutos;
-    DecimalFormat decimales = new DecimalFormat("0.000");
+    DecimalFormat decimales = new DecimalFormat("0.00");
     public void Variables(){
      
         System.out.println("Consumo de conbustible.    ");
@@ -67,9 +67,7 @@ public class E8 {
     public void Consumokm(){
         litrosKM = DineroGastado / Gasolina;//litros consumibles totales        
         litrosKM = litrosKM/KMrecorrido;//Litros por KM
-        DineroKM = DineroGastado/KMrecorrido;//Dinero gastado por KM
-        litrosKM = Math.rint(litrosKM * 10000)/10000;
-        DineroKM = Math.rint(DineroKM * 100)/100;
+        DineroKM = DineroGastado/KMrecorrido;//Dinero gastado por KM        
         Consumo100KM(litrosKM,DineroKM);                
     }
     public void Consumo100KM(double LitrosKM, double DineroKM){
@@ -78,13 +76,13 @@ public class E8 {
         VelocidadMedia();
     }
     public void VelocidadMedia(){
-        HorasTotal = Horas + Minutos / 60; 
-        VelocidadKMH = (int) (KMrecorrido/ HorasTotal);
-        VelocidadMS = (int)((KMrecorrido * 1000) / (HorasTotal * 3600)); 
+        HorasTotal = (Horas + Minutos) ;        
+        VelocidadKMH = (KMrecorrido * 60) / HorasTotal;
+        VelocidadMS = ((KMrecorrido * 1000 * 60) / (HorasTotal * 3600)); 
         mostrar();
     }
     public void mostrar(){
-        
+        System.out.println(Minutos);
         System.out.println("1. Consumo de gasolina (en litros y dólares) por cada 100 km. \n " 
                 + "Litros : " + decimales.format(litros100KM) + " Dólares : " + decimales.format(Dinero100KM) + 
                 "\n 2. Consumo de gasolina (en litros y dólares) por cada km. \n " 

@@ -12,7 +12,7 @@ package Modulos;
 public class E48 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     public void calculo(){        
-        System.out.println("-------------------ejercicio 48-------------------");
+        System.out.println("Diseñar un programa que permita calcular los 5 primeros números perfectos ");
         int i, j, suma;
         System.out.println("Primeros  5 Números perfectos : ");
         for(i=1;i<=10000;i++){    // i es el número que vamos a comprobar

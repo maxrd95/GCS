@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class E22 {
     Scanner ValorPedido = new Scanner(System.in);
     Metodo.Metodos metodo = new Metodo.Metodos();
-    DecimalFormat decimales = new DecimalFormat("0.00");
+    DecimalFormat decimales = new DecimalFormat("0.0000");
     public void Datos(){
         String valor,depreciacion;
         double valorVehiculo;
@@ -39,10 +39,10 @@ public class E22 {
     public void Calculo(int Depreciacion, double valorVehiculo){
         int sumatoria;
         double Valor;
-        sumatoria = (Depreciacion*(Depreciacion + 1))/2;
-        System.out.println(sumatoria);
+        sumatoria = (Depreciacion*(Depreciacion + 1))/2;        
         for (int i = 0; i < Depreciacion; i++) {            
-            Valor = (Depreciacion - i)/(sumatoria * valorVehiculo);
+            Valor = ((Depreciacion * 360) - i)/(sumatoria * valorVehiculo);
+            
             System.out.println("===== Depreciación " + (i+1) + " año : " + decimales.format(Valor));
             
         }    

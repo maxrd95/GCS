@@ -26,5 +26,6 @@ public class E50 {
             Serie = Serie + " ; "+serie;
         }
         System.out.println(Serie);
+        metodo.retorno();
     }
 }

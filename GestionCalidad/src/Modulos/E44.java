@@ -25,13 +25,14 @@ public class E44 {
         calcular(N);
     }
     public void calcular(int N){
-        double S = 1;
+        double S = 1,s=0;
         double contador = 0 ;
         while(contador < N){
-            contador++;            
+            contador++;      
             S = S * contador;
+            s = s + S;
         }        
-        System.out.println("El factorial es : " + S);
+        System.out.println("El factorial es : " + s);
         metodo.retorno();
     }
 }

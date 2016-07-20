@@ -6,6 +6,7 @@
 package Modulos;
 
 import static debergcs.DeberGCS.Menu;
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -17,6 +18,7 @@ public class E2 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     String cadena;
     double valor,totalM,totalKM;
+    DecimalFormat decimales = new DecimalFormat("0.00"); //Nos permite mostrar por pantalla numeros con el formato dado
     public void Millas_M(){
         System.out.println("Cálcular Metros o Kilometros de Millas Marinas");
         System.out.println("Ingrese un valor en Millas Marinas");
@@ -32,7 +34,7 @@ public class E2 {
     public void mostrar(){
         totalM = Math.round(totalM*1000)/1000;
         totalKM = Math.round(totalKM * 1000)/1000;
-        System.out.println("Su valor en Metros es: " + totalM + " m\n" + "Su valor en Kilometros es: " + totalKM + " km");
+        System.out.println("Su valor en Metros es: " + decimales.format(totalM) + " m\n" + "Su valor en Kilometros es: " + decimales.format(totalKM) + " km");
         metodo.retorno();
     }
 }

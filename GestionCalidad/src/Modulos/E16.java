@@ -37,7 +37,7 @@ public class E16 {
         
         if (Valor < 0) {
             System.out.println("Negativo");
-        }else{
+        }else if(Valor >0){
             System.out.println("Positivo");
         }
         if (Valor%2==0) {

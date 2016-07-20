@@ -19,5 +19,6 @@ public class E38 {
         int suma,N=9,contador=0;
         suma = (N*(N + 1))/2;
         System.out.println("La suma es: " + suma);
+        metodo.retorno();
     }
 }

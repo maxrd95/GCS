@@ -6,6 +6,7 @@
 package Metodo;
 
 import static debergcs.DeberGCS.Menu;
+import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
@@ -30,7 +31,23 @@ public class Metodos {
         }
         return valor;
     }
-    
+    public BigInteger BigEntero(String valor){
+        int ban=0;
+        BigInteger valorD;
+        valorD = BigInteger.valueOf(Long.parseLong(valor));
+        do{            
+            try{ 
+                   ban=0;
+                   valorD = BigInteger.valueOf(Long.parseLong(valor));
+                   max(valor);
+            } catch(NumberFormatException nfe) { 
+            System.out.println("No se ingreso su valor, ingrese un número entero");
+            valor = numero.next();
+            ban=1;
+            }
+        }while(ban==1);
+        return valorD;
+    }
     public int Entero(String valor){
         int valorD=0,ban=0;
         do{            

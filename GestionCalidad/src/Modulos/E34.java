@@ -5,6 +5,8 @@
  */
 package Modulos;
 
+import java.math.BigInteger;
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -14,12 +16,14 @@ import java.util.Scanner;
 public class E34 {
     Scanner ValorPedido = new Scanner(System.in);
     Metodo.Metodos metodo = new Metodo.Metodos();
-    public void Datos(){
+    DecimalFormat decimales = new DecimalFormat("0.000");
+    public void Datos(){                
         int N;
         String n;
         System.out.println("Ingreso de un valor entero e indique si dicho valor es primo o no");
-        System.out.println("Ingrese el valor entero");
-        n = ValorPedido.next();
+        System.out.println("Ingrese el valor entero");        
+        n = ValorPedido.next();   
+        n = metodo.max(n);
         N = metodo.Entero(n);
         N = metodo.NegativoE(N);
         mostrar(N);

@@ -23,7 +23,8 @@ public class E36 {
         System.out.println("Encuentre y Muestre la segunda cantidad mayor de las N cantidades positivas ingresadas ");
         System.out.println("Ingrese N cantidades positivas y precione s para cuando desee salir");
         while(ban == 0 ){
-            valor = ValorPedido.next();            
+            valor = ValorPedido.next();
+            valor = metodo.max(valor);
             if (("s".equals(valor))||("S".equals(valor))) {
                 ban=1;
             }else{

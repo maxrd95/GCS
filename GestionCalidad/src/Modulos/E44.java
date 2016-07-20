@@ -18,7 +18,7 @@ public class E44 {
         int N;
         String n;
         System.out.println("Mostrar el resultado de la siguiente fórmula");
-        System.out.println("Ingrese un valor N para S =  1! +2! + 3! +  ...............+ N!");
+        System.out.println("Ingrese un valor N para S =  1! + 2! + 3! +  ...............+ N!");
         n = ValorPedido.next();
         N = metodo.Entero(n);
         N = metodo.NegativoE(N);

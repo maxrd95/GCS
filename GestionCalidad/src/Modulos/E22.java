@@ -5,6 +5,7 @@
  */
 package Modulos;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -14,6 +15,7 @@ import java.util.Scanner;
 public class E22 {
     Scanner ValorPedido = new Scanner(System.in);
     Metodo.Metodos metodo = new Metodo.Metodos();
+    DecimalFormat decimales = new DecimalFormat("0.00");
     public void Datos(){
         String valor,depreciacion;
         double valorVehiculo;
@@ -41,7 +43,7 @@ public class E22 {
         System.out.println(sumatoria);
         for (int i = 0; i < Depreciacion; i++) {            
             Valor = (Depreciacion - i)/(sumatoria * valorVehiculo);
-            System.out.println("===== Depreciación " + (i+1) + " año : " + Valor);
+            System.out.println("===== Depreciación " + (i+1) + " año : " + decimales.format(Valor));
             
         }    
         metodo.retorno();

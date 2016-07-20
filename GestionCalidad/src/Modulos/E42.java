@@ -5,6 +5,7 @@
  */
 package Modulos;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -14,6 +15,7 @@ import java.util.Scanner;
 public class E42 {
     Scanner ValorPedido = new Scanner(System.in);
     Metodo.Metodos metodo = new Metodo.Metodos();
+    DecimalFormat decimales = new DecimalFormat("0.00");
     public void Datos(){
         int N=0;
         String n;
@@ -35,7 +37,7 @@ public class E42 {
             contador++;            
             S = S +  (contador/(contador*2));
         }
-        System.out.println("El valor de S es : " + S);
+        System.out.println("El valor de S es : " + decimales.format(S));
         metodo.retorno();
     }
 }

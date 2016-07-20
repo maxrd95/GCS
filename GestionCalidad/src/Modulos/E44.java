@@ -16,9 +16,12 @@ public class E44 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     public void Datos(){
         int N;
+        String n;
         System.out.println("Mostrar el resultado de la siguiente fórmula");
         System.out.println("Ingrese un valor N para S =  1! +2! + 3! +  ...............+ N!");
-        N = ValorPedido.nextInt();
+        n = ValorPedido.next();
+        N = metodo.Entero(n);
+        N = metodo.NegativoE(N);
         calcular(N);
     }
     public void calcular(int N){
@@ -29,5 +32,6 @@ public class E44 {
             S = S * contador;
         }        
         System.out.println("El factorial es : " + S);
+        metodo.retorno();
     }
 }

@@ -10,6 +10,7 @@ package Modulos;
  * @author Riden
  */
 public class E48 {
+    Metodo.Metodos metodo = new Metodo.Metodos();
     public void calculo(){        
         System.out.println("-------------------ejercicio 48-------------------");
         int i, j, suma;
@@ -27,5 +28,6 @@ public class E48 {
               }
           
         }
+        metodo.retorno();
     }
 }

@@ -10,6 +10,7 @@ package Modulos;
  * @author Riden
  */
 public class E50 {
+    Metodo.Metodos metodo = new Metodo.Metodos();
     public void mostrar(){
         int serie=0,n=1800,contador=2;
         String Serie="";

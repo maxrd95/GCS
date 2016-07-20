@@ -59,38 +59,54 @@ public class E10 {
         metodo.retorno();
     }
     public void moto(){
-        double km,valorPagar;
+        double km=0,valorPagar;
         String KM;
         System.out.println("Ingrese los km recorridos:");
-        KM = numero.next();
-        km = metodo.Doble(KM);
-        km = metodo.NegativoD(km);
+        while(km<=0){
+            KM = numero.next();
+            km = metodo.Doble(KM);
+            km = metodo.NegativoD(km);
+            if (km<=0) {
+                System.out.println("EL km no puede ser 0");
+            }
+        }        
         valorPagar = km * 0.30;
         System.out.println("Valor a pagar de su moto : $ " + decimales.format(valorPagar));
         metodo.retorno();
     }
     public void carro(){
-        double km,valorPagar;
+        double km=0,valorPagar;
         String KM;
         System.out.println("Ingrese los km recorridos:");
-        KM = numero.next();
-        km = metodo.Doble(KM);
-        km = metodo.NegativoD(km);
+        while(km<=0){
+            KM = numero.next();
+            km = metodo.Doble(KM);
+            km = metodo.NegativoD(km);
+            if (km<=0) {
+                System.out.println("EL km no puede ser 0");
+            }
+        }
+        
         valorPagar = km * 0.30;        
         System.out.println("Valor a pagar de su auto: $ " + decimales.format(valorPagar));
         metodo.retorno();
     }
     public void camion(){
-        double km,tm,valorPagar;
+        double km=0,tm=0,valorPagar;
         String KM,TM;
         System.out.println("Ingrese los km recorridos:");
-        KM = numero.next();
-        km = metodo.Doble(KM);
-        km = metodo.NegativoD(km);
-        System.out.println("Ingrese las toneladas méricas:");
+        while(km<=0){
+            KM = numero.next();
+            km = metodo.Doble(KM);
+            km = metodo.NegativoD(km);
+            if (km<=0) {
+                System.out.println("EL km no puede ser 0");
+            }
+        }
+        System.out.println("Ingrese las toneladas métricas:");        
         TM = numero.next();
         tm = metodo.Doble(TM);
-        tm = metodo.NegativoD(tm);
+        tm = metodo.NegativoD(tm);                    
         valorPagar = (km * 0.50) + (tm * 0.10);        
         System.out.println("Valor a pagar de su camión: $ " + decimales.format(valorPagar));
         metodo.retorno();

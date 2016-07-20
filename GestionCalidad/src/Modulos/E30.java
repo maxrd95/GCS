@@ -21,6 +21,7 @@ public class E30 {
         System.out.println("Ingrese un número N");
         while(N < 20 || N>1000000000){
             n = ValorPedido.next();
+            n = metodo.max(n);
             N = metodo.Entero(n);
             if (N<20) {
                 System.out.println("Ingrese un valor N mayor a 20 y menor a 1.000.000.000");
@@ -29,10 +30,13 @@ public class E30 {
         Mostrar(N);
     }
     public void Mostrar(int N){
-        int calcular=0;
-        for (int i = 20; i < N; i = i+2) {
-            calcular = calcular + i;            
+        int calcular=0,n2;
+        if (!(N%2==0)) {
+            N=N-1;
         }
+        n2 = N/2;
+        calcular = n2 * (n2 + 1);
+        calcular = calcular - 90;        
         System.out.println(calcular);
         metodo.retorno();
     }

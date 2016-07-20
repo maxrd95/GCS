@@ -17,13 +17,19 @@ public class E12 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     
     public void Datos(){                
-        double Sueldo;
+        double Sueldo=0;
         String sueldo;
         System.out.println("Ganancia neta de un trabajador dependiendo de su sueldo.");
         System.out.println("Ingrese el sueldo del trabajador: ");
-        sueldo = numero.next();        
-        Sueldo = metodo.Doble(sueldo);
-        Sueldo = metodo.NegativoD(Sueldo);        
+        while(Sueldo<50){
+            sueldo = numero.next();        
+            Sueldo = metodo.Doble(sueldo);
+            Sueldo = metodo.NegativoD(Sueldo);        
+            if (Sueldo<50) {
+                System.out.println("Sueldo mínimo $50");
+            }
+        }
+        
         Mostrar(Sueldo);
     }
     public void Mostrar(double sueldo){

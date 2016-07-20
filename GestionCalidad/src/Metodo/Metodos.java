@@ -26,9 +26,9 @@ public class Metodos {
     }
     
     public String SoN (String valor){
-        while(!("s".equals(valor)) && !("n").equals(valor)){
+        while(!("S".equals(valor)) && !("N").equals(valor)){
             System.out.println("Solo puede ingresar s para continuar o n para salir");
-            valor = numero.next();
+            valor = numero.next().toUpperCase();
         }
         return valor;
     }
@@ -41,7 +41,7 @@ public class Metodos {
                    valorD = Integer.parseInt(valor);
                    max(valor);
             } catch(NumberFormatException nfe) { 
-            System.out.println("No es de tipo entero");
+            System.out.println("No se ingreso su valor, ingrese un número entero");
             valor = numero.next();
             ban=1;
             }
@@ -58,7 +58,7 @@ public class Metodos {
                    ban=0;
                    ValorD = Double.parseDouble(valor); 
             } catch(NumberFormatException nfe) { 
-            System.out.println("no es un numero, ingrese de nuevo un valor");
+            System.out.println("No es un nùmero, ingrese de nuevo un valor");
             valor = numero.next();
             ban=1;
             }
@@ -68,9 +68,9 @@ public class Metodos {
     public void retorno(){
         String Salida;
         System.out.println("Presione s para continuar en el menú principal y n para salir");
-        Salida = numero.next();
+        Salida = numero.next().toUpperCase();
         Salida = SoN(Salida);
-        if ("s".equals(Salida) || "S".equals(Salida)) {
+        if (("s".equals(Salida)) || ("S".equals(Salida))) {
             Menu();
         }
     }

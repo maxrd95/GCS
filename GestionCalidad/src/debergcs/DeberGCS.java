@@ -23,7 +23,7 @@ public class DeberGCS {
         System.out.println("====================================================Menú=========================================================");
         System.out.println("===== 1.-  Cálcular Metros o Kilometros de Millas Marinas.                                                 ======");
         System.out.println("===== 2.-  Área y el perímetro de un triángulo rectángulo.                                                 ======");
-        System.out.println("===== 3.-  Calcular días y horas en minutos.                                                               ======");
+        System.out.println("===== 3.-  Calcular días, horas y minutos usando  minutos.                                                 ======");
         System.out.println("===== 4.-  Consumo de conbustible.                                                                         ======");
         System.out.println("===== 5.-  Valor a pagar en la carretera dependiendo del vehiculo.                                         ======");
         System.out.println("===== 6.-  Ganancia neta de un trabajador dependiendo de su sueldo.                                        ======");

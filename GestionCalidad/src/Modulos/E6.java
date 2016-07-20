@@ -17,9 +17,8 @@ public class E6 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     public void E6(){        
         int Dia = 0,Hora=0,Minuto=0;
-        String minuto;
-        System.out.println("--------------Ejercicio 6----------------------");
-        System.out.println("Calcular días y horas en minutos");        
+        String minuto;        
+        System.out.println("Calcular días, horas y minutos usando  minutos");        
         System.out.println("Ingrese los minutos que desea calcular en Días, Horas y Minutos");
         minuto = numero.next();
         minuto = metodo.max(minuto);

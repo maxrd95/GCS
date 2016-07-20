@@ -7,6 +7,7 @@ package Modulos;
 
 
 import static debergcs.DeberGCS.Menu;
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -16,10 +17,10 @@ import java.util.Scanner;
 public class E8 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     Scanner numero = new Scanner(System.in);
-    int Horas,Minutos,VelocidadKMH,VelocidadMS;
-    double litrosKM,DineroKM,litros100KM,Dinero100KM,HorasTotal,KMrecorrido,Gasolina,DineroGastado;
+    int Horas,Minutos=61,VelocidadKMH,VelocidadMS;
+    double litrosKM,DineroKM,litros100KM,Dinero100KM,HorasTotal,KMrecorrido,Gasolina=0,DineroGastado;
     String kmrecorrido,gasolina,dineroGastado,horas,minutos;
-    
+    DecimalFormat decimales = new DecimalFormat("0.000");
     public void Variables(){
      
         System.out.println("Consumo de conbustible.    ");
@@ -27,23 +28,40 @@ public class E8 {
         kmrecorrido = numero.next();        
         KMrecorrido = metodo.Doble(kmrecorrido);
         KMrecorrido = metodo.NegativoD(KMrecorrido);
-        System.out.println("Precio de la gasolina por litro");
-        gasolina = numero.next();
-        Gasolina=metodo.Doble(gasolina); 
-        Gasolina = metodo.NegativoD(Gasolina);
+        System.out.println("Precio de la gasolina por litro");        
+        while(Gasolina < 0.1 || Gasolina >100){
+            gasolina = numero.next();
+            Gasolina=metodo.Doble(gasolina); 
+            Gasolina = metodo.NegativoD(Gasolina);
+            if (Gasolina < 0.1 || Gasolina >100) {
+                System.out.println("Ingrese un precio real para la gasolina");
+            }
+        }
         System.out.println("Dinero de la gasolina gastado en el viaje");
-        dineroGastado = numero.next();
-        DineroGastado=metodo.Doble(dineroGastado);
-        DineroGastado = metodo.NegativoD(DineroGastado);
+        while(DineroGastado < Gasolina){
+            dineroGastado = numero.next();
+            DineroGastado=metodo.Doble(dineroGastado);
+            DineroGastado = metodo.NegativoD(DineroGastado);
+            if (DineroGastado < Gasolina) {
+                System.out.println("El dinero gastado debe ser mayor al precio de la gasolina");
+            }
+        }
+        
         System.out.println("Tiempo que se ha tardado (en horas y minutos)");
         System.out.println("Ingrese la/s hora/s transcurrida/s");
         horas = numero.next();
+        horas = metodo.max(horas);
         Horas = metodo.Entero(horas);
         Horas = metodo.NegativoE(Horas);
         System.out.println("Ingrese el/los minuto/s transcurrido/s");
-        minutos = numero.next();
-        Minutos = metodo.Entero(minutos);
-        Minutos = metodo.NegativoE(Minutos);
+        while(Minutos > 60){
+            minutos = numero.next();
+            Minutos = metodo.Entero(minutos);
+            Minutos = metodo.NegativoE(Minutos);
+            if (Minutos > 60) {
+                System.out.println("Los minutos no pueden ser superiores a 60");
+            }
+        }
         Consumokm();        
     }
     public void Consumokm(){
@@ -68,11 +86,11 @@ public class E8 {
     public void mostrar(){
         
         System.out.println("1. Consumo de gasolina (en litros y dólares) por cada 100 km. \n " 
-                + "Litros : " + litros100KM + " Dólares : " + Dinero100KM + 
+                + "Litros : " + decimales.format(litros100KM) + " Dólares : " + decimales.format(Dinero100KM) + 
                 "\n 2. Consumo de gasolina (en litros y dólares) por cada km. \n " 
-                + "Litros : " + litrosKM + " Dólares : " + DineroKM + "\n" +
+                + "Litros : " + decimales.format(litrosKM) + " Dólares : " + decimales.format(DineroKM) + "\n" +
                 "3. Velocidad media (en km/h y m/s). \n" +
-                "KM/H : " + VelocidadKMH + "  M/S : " + VelocidadMS);
+                "KM/H : " + decimales.format(VelocidadKMH) + "  M/S : " + decimales.format(VelocidadMS));
         metodo.retorno();
     }
 }

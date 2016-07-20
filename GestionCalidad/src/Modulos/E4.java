@@ -19,17 +19,29 @@ public class E4 {
      DecimalFormat decimales = new DecimalFormat("0.0000"); //Nos permite mostrar por pantalla numeros con el formato dado
     public void E4(){        
         System.out.println("Área y el perímetro de un triángulo rectángulo");   
-        double Base,Altura;
+        double Base=0,Altura=0;
         double Area,hipotenusa,Perimetro;
         String base,altura;
         System.out.println("Ingrese la Base del triángulo");  
-        base = numero.next();
-        Base = metodo.Doble(base);
-        Base = metodo.NegativoD(Base);
+        
+        while(Base < 1){            
+            base = numero.next();
+            Base = metodo.Doble(base);
+            Base = metodo.NegativoD(Base);
+            if (Base < 1) {
+                System.out.println("La base no puede ser 0 ");
+            }
+        }
         System.out.println("Ingrese la Altura del triángulo");
-        altura = numero.next();
-        Altura = metodo.Doble(altura);     
-        Altura = metodo.NegativoD(Altura);
+       
+        while(Altura < 1){            
+            altura = numero.next();
+            Altura = metodo.Doble(altura);     
+            Altura = metodo.NegativoD(Altura);
+            if (Altura < 1) {
+                System.out.println("La altura no puede ser 0 ");
+            }
+        }
         Area = (Base * Altura)/2;
         hipotenusa = (Base * Base) + (Altura * Altura);
         hipotenusa =  Math.sqrt(hipotenusa);

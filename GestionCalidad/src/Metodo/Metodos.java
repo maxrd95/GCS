@@ -17,11 +17,9 @@ public class Metodos {
     
     public String max(String cadena){                    
         while(cadena.length() > 9){
-            System.out.println("Igrese valores que no sobrepasen el limite de la variable, máximo 9 dígitos");
-            cadena =numero.next();
-            
-        }                                
-        
+            System.out.println("Igrese valores que no sobrepasen el límite de la variable, máximo 9 dígitos");
+            cadena =numero.next();            
+        }                                        
         return cadena;
     }
     

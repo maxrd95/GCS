@@ -18,7 +18,7 @@ public class E2 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     String cadena;
     double valor,totalM,totalKM;
-    DecimalFormat decimales = new DecimalFormat("0.00"); //Nos permite mostrar por pantalla numeros con el formato dado
+    DecimalFormat decimales = new DecimalFormat("0.000"); //Nos permite mostrar por pantalla numeros con el formato dado
     public void Millas_M(){
         System.out.println("Cálcular Metros o Kilometros de Millas Marinas");
         System.out.println("Ingrese un valor en Millas Marinas");
@@ -28,12 +28,10 @@ public class E2 {
         Millas_KM(totalM);
     }
     public void Millas_KM(double KM){                        
-        totalKM = KM * 1000;
+        totalKM = KM / 1000;
         mostrar();
     }
-    public void mostrar(){
-        totalM = Math.round(totalM*1000)/1000;
-        totalKM = Math.round(totalKM * 1000)/1000;
+    public void mostrar(){        
         System.out.println("Su valor en Metros es: " + decimales.format(totalM) + " m\n" + "Su valor en Kilometros es: " + decimales.format(totalKM) + " km");
         metodo.retorno();
     }

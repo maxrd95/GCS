@@ -58,7 +58,7 @@ public class Metodos {
                    ban=0;
                    ValorD = Double.parseDouble(valor); 
             } catch(NumberFormatException nfe) { 
-            System.out.println("No es un número ");
+            System.out.println("no es un numero, ingrese de nuevo un valor");
             valor = numero.next();
             ban=1;
             }

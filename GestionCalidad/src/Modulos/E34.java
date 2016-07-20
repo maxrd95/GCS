@@ -16,9 +16,12 @@ public class E34 {
     Metodo.Metodos metodo = new Metodo.Metodos();
     public void Datos(){
         int N;
+        String n;
         System.out.println("Ingreso de un valor entero e indique si dicho valor es primo o no");
         System.out.println("Ingrese el valor entero");
-        N = ValorPedido.nextInt();  
+        n = ValorPedido.next();
+        N = metodo.Entero(n);
+        N = metodo.NegativoE(N);
         mostrar(N);
     }
     public void mostrar(int N){
@@ -28,5 +31,6 @@ public class E34 {
         if (N==2 || N==3 || N==5 || N==7 || N==11 || N==13) {
             System.out.println("Primo");
         }
+        metodo.retorno();
     }
 }   

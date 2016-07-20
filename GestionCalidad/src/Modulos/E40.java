@@ -15,14 +15,23 @@ public class E40 {
     Scanner ValorPedido = new Scanner(System.in);
     Metodo.Metodos metodo = new Metodo.Metodos();
     public void Datos(){
-        int A,N;
+        int A,N=-1;
+        String a,n;
         System.out.println("Mostrar el resultado de la siguiente fórmula");
         System.out.println("Ingrese el valor de A y N para la siguiente formula S = ( A - 1)1 + ( A - 2)2 + ( A - 3)3 + ……..( A - N)N");
         System.out.println("Ingrese el valor de A");
-        A = ValorPedido.nextInt();
+        a = ValorPedido.next();
+        A = metodo.Entero(a);        
         System.out.println("Igrese el valor de N");
-        N = ValorPedido.nextInt();
+        while(N < 0 || N > 1000000){
+            n = ValorPedido.next();
+            N = metodo.Entero(n);
+            if (N < 0 || N > 100) {
+                System.out.println("Ingrese un valor de N de 0 a 100");
+            }            
+        }
         calcular(A,N);
+       
     }
     public void calcular(int A,int N){
         int contador=0;
@@ -33,5 +42,6 @@ public class E40 {
             S = S + Math.pow(s,contador);
         }
         System.out.println("El valor de S es : " + S);
+        metodo.retorno();
     }
 }

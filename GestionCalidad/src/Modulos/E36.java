@@ -27,7 +27,7 @@ public class E36 {
             if (("s".equals(valor))||("S".equals(valor))) {
                 ban=1;
             }else{
-                Numero.add(Integer.parseInt(valor));
+                Numero.add(metodo.Entero(valor));
             }
         }        
         mostrar(Numero);
@@ -45,5 +45,6 @@ public class E36 {
             }
         }
         System.out.println("El segundo valor mayor es : " + valor2M);
+        metodo.retorno();
     }
 }

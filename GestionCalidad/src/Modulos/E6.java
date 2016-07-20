@@ -22,6 +22,7 @@ public class E6 {
         System.out.println("Calcular días y horas en minutos");        
         System.out.println("Ingrese los minutos que desea calcular en Días, Horas y Minutos");
         minuto = numero.next();
+        minuto = metodo.max(minuto);
         Minuto = metodo.Entero(minuto);
         Minuto = metodo.NegativoE(Minuto);
         if(Minuto >= 1440){

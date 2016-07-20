@@ -14,12 +14,14 @@ import java.util.Scanner;
  */
 public class Metodos {
     Scanner numero = new Scanner(System.in);
-    public String max(String cadena){                  
-        a:if (cadena.length()== 9){
-                System.out.println("Igrese valores que no sobrepasen el limite de la variable, máximo 9 dígitos");
-                cadena =numero.next();
-                break a;             
-            }
+    
+    public String max(String cadena){                    
+        while(cadena.length() > 9){
+            System.out.println("Igrese valores que no sobrepasen el limite de la variable, máximo 9 dígitos");
+            cadena =numero.next();
+            
+        }                                
+        
         return cadena;
     }
     
@@ -36,7 +38,8 @@ public class Metodos {
         do{            
             try{ 
                    ban=0;
-                   valorD = Integer.parseInt(valor); 
+                   valorD = Integer.parseInt(valor);
+                   max(valor);
             } catch(NumberFormatException nfe) { 
             System.out.println("No es de tipo entero");
             valor = numero.next();
